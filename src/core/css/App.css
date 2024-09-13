@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.back_layer{
+    position: relative;
+    height: 100vh;
+}
+
+.front_layer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    
+    border: 1vh solid #B0F2AE;
+    border-bottom: 0px;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    box-sizing: border-box;
+    
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.front_layer_hidden{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    /*background-color: rgb(220, 240, 220);*/
+    background-color: #FAFAFA;
+
+    border: 1vh solid #B0F2AE;
+    border-bottom: 0px;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    box-sizing: border-box;
+    
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateY(69vh);
+
+    cursor: pointer;
+
+}
+
+.front_layer_hidden:hover{
+    border: 1vh solid #00825A;
+    border-bottom: 0px;
+}
+
+@keyframes disappear {
+    from {opacity: 100;}
+    to {opacity: 0;}
+  }
+
+.hide{
+    color: black;
+    cursor: pointer;
+}
+
+.nohide{
+    animation-name: disappear;
+    animation-duration: 2s;
+    display: none;
+}
+
+/*STICKBAR*/
+.stickbar{
+    height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.logo_wompi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1vh solid #B0F2AE;
+    img{
+        width: 25%;
+    }
+}
+
+.payment_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1vh solid #B0F2AE;
+
+    button{
+        border: 1px solid #B0F2AE;
+        background-color: #B0F2AE;
+        border-radius: 25px;
+        height: 30%;
+        width: 30%;
+        font-weight: bold;
+        font-size: 100%;
+    }
+
+    button:hover{
+        border: 1px solid #00825A;
+        background-color: #00825A;
+        border-radius: 25px;
+        height: 30%;
+        width: 30%;
+        font-weight: bold;
+        font-size: 100%;
+        cursor:pointer;
+    }
+
+}
+
+/*MODAL*/
+.modal{
+    position: fixed;
+    background-color: white;
+    backdrop-filter: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+}
+
+.modal_hidden{
+    display: none;
+}
+
+.modal_button{
+    
+}
+
+.modal_button:hover{
+    
+}
